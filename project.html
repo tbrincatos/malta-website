@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malta 🇲🇹</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(242, 235, 243) 0%,
+          rgb(234, 241, 249) 90.1%
+        );
+        text-align: center;
+      }
+      h1 {
+        color: rgba(255, 0, 0, 0.719);
+        border: 1px solid rgba(255, 0, 0, 0.719);
+        border-radius: 4px;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+      h2 {
+        color: rgba(255, 0, 0, 0.616);
+        font-weight: lighter;
+      }
+      footer {
+        color: rgba(255, 0, 0, 0.616);
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+      img {
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      p {
+        color: #045870;
+        line-height: 1.5;
+        margin-top: 20px;
+        text-align: justify;
+      }
+      hr {
+        color: rgba(255, 0, 0, 0.719);
+      }
+      button {
+        background-color: whitesmoke;
+        border: 1px solid rgba(255, 0, 0, 0.719);
+        border-radius: 30px;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+        color: rgba(255, 0, 0, 0.719);
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid rgba(255, 0, 0, 0.719);
+        cursor: grab;
+      }
+      a {
+        color: rgba(255, 0, 0, 0.719);
+        text-decoration: none;
+      }
+      .content {
+        margin: 0 auto;
+        max-width: 700px;
+        padding: 40px;
+      }
+      .archipelago {
+        font-weight: bold;
+      }
+      .tickets:hover {
+        color: whitesmoke;
+        cursor: grab;
+      }
+      .visit-malta:hover {
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 0, 0, 0.616);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Malta</h1>
+      <h2>A gem in the heart of the Mediterranean</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/250/original/Malta.jpg?1630254586"
+        alt="Image of Valletta"
+      />
+      <p>
+        Boasting a rich cultural heritage, spectacular archeaological sites,
+        incredible beaches and divine food, the
+        <span class="archipelago"> archipelago of Malta</span> has much to
+        offer. Situated between the island of Sicily and the North African
+        coast, Malta's strategic location has played a vital role in shaping its
+        history, as centuries of foreign rule by the Phoenicians, Romans, Arabs,
+        Normans, Knights of St John, French and British determined its fate. And
+        thus, this medley of cultural influences left their mark on Malta's
+        architecture, culture and culinary traditions.
+        <br />
+        <br />
+        For more information on the sunniest country in Europe and its turquoise
+        waters, head to
+        <a
+          href="https://www.visitmalta.com/en/"
+          target="_blank"
+          class="visit-malta"
+        >
+          <em>Visit Malta</em>.</a
+        >
+      </p>
+      <br />
+      <button>
+        <a href="https://airmalta.com/fr-fr" target="_blank" class="tickets"
+          >Buy tickets</a
+        >
+      </button>
+      <br />
+      <hr />
+      <footer>
+        <strong>Coded by Tamsin Brincat</strong> <br />
+        👩‍🦰
+      </footer>
+    </div>
+    <script>
+      function adultAge(event) {
+        let age = prompt("How old are you?");
+        if (age >= 18) {
+          alert("👍 You can proceed to the Airmalta website");
+        } else {
+          alert(
+            "Sorry 😪, you're too young! You can't proceed to the Airmalta website."
+          );
+          event.preventDefault();
+        }
+      }
+      let ticketsButton = document.querySelector(".tickets");
+      ticketsButton.addEventListener("click", adultAge);
+    </script>
+  </body>
+</html>
